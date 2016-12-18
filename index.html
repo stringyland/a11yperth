@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name or purpose of page</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+  <a href="#main">Skip to content</a>
+  <header>
+    <a href="#"><img src="img/logo.png" alt="My Site Home"></a>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#" aria-describedby="current">Current Page</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div hidden id="current">Current page: </div>
+    </nav>
+  </header>
+
+  <main>
+    <p><a href="http://www.google.com">Google standard</a> | <a href="http://www.google.com" target="_blank">Google!</a> | <a href="#" class="call-to-action">Buy Now!</a></p>
+
+    <p><button>Standard</button>
+    <button>
+      <img src="img/icons/menu.svg" alt="" /> Menu
+    </button>
+    <button>
+      <img src="img/icons/menu.svg" alt="icon only" />
+    </button></p>
+
+    <div>
+      <form>
+        <div>
+          <label for="email">Your email address <span class="required" aria-hidden="true">*</span></label><br>
+          <input id="email" type="text" aria-required="true">
+        </div>
+        <div>
+          <label for="username">Choose a username</label><br>
+          <input id="username" type="text" placeholder="e.g. TacoFiend">
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+  </footer>
+
+
+  <!--scripts go below here -->
+  <script src="scripts.js"></script>
+</body>
+</html>
