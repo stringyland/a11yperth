@@ -1,0 +1,17 @@
+
+.container {
+  margin-top: 3rem;}
+#content {
+  padding-right: 16px;
+  border-right: 1px solid #E1E1E1;
+}
+#sidebar h3 {
+  font-size: 2rem;
+}
+#sidebar p {
+  font-size: 1rem;
+}
+
+.list-nobullets {
+  list-style: none;
+}
