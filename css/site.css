@@ -31,3 +31,31 @@ h4 {
 
 small, .font_small {
   font-size: 0.75em; }
+
+header, main, footer {
+  width: 90%;
+  max-width: 60em;
+  margin: 0 auto; }
+
+nav ul {
+  width: 100%;
+  border: 1px solid #333333;
+  border-width: 1px 0 1px 0;
+  font-size: 1.333em;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0; }
+
+nav li {
+  display: flex;
+  flex-grow: 1; }
+
+nav a {
+  text-decoration: none;
+  width: 100%;
+  padding: 0.5em 1em;
+  text-align: center; }
+
+nav [aria-current="page"] {
+  background: #A2DED0; }
