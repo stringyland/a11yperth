@@ -1,0 +1,180 @@
+
+
+/* ELEMENTS
+--------------------*/
+html {
+  font-size: calc(1em+1vw);
+  background: #fff;
+  color: #333;}
+
+@media (min-width: 120em) {
+  html {
+    font-size: calc(1.5em+1vw);}
+}
+
+h1 {font-size: 3em;}
+h2 {font-size: 2.25em;}
+h3 {font-size: 1.5em;}
+p {line-height: 1.5;}
+
+/* links which open new windows need icon + alt */
+a[target="_blank"]:after {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('../img/icons/newwindow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75% auto;
+  content: ' (opens in a new window)';
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 1em;}
+
+a:hover, a:focus {
+  background-color: #efefef;
+}
+button {
+  padding: 0.5em 1em;
+}
+button:hover, button:focus {
+  outline: 0;
+  border: 2px solid black;
+}
+button img {
+  height: 1em;
+  margin: auto 0;
+}
+/*remove non-standard browser feature*/
+::-moz-focus-inner {
+  border: 0;
+}
+
+::placeholder {
+  color: #333;
+  font-style: italic;
+}
+/* keep these separate to prevent other browsers from choking on proprietary selectors */
+::-webkit-input-placeholder {
+  color: #333;
+  font-style: italic;
+}
+::-moz-placeholder {
+  color: #333;
+  font-style: italic;
+}
+
+
+
+/* LAYOUT
+-------------------- */
+header, main, footer {
+  max-width: 60em;
+  margin: 1em auto;
+}
+
+/* margin between elements */
+main * + *,
+* + h2,
+* + h3 {
+  margin-top: 1.5em;
+}
+main * + *:not(p) {
+  margin-top: 3em 0;
+}
+main br + input {
+  margin-top: 0.5em;
+}
+li, dt, dd, br, th, td {
+  margin-top: 0;
+}
+
+/* hide any empty elements added via CMS */
+main p:empty {
+  display: none;
+}
+
+
+
+/* UTILITIES
+-------------------- */
+.is-hidden {
+  display: none;
+}
+.is-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+.is-showing {
+  display: block;
+}
+
+/* COMPONENTS
+-------------------- */
+/* Skip link */
+[href="#main"] {
+  position: absolute;
+  top:0;
+  right: 100%;
+}
+[href="#main"]:focus {
+  right: auto;
+}
+
+/* Main navigation */
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+}
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  background: #333;
+  border: 1px solid #333;
+  padding: 0.5em 1em;
+}
+nav [aria-describedby="current"] {
+  color: #333;
+  background: #fff;
+}
+nav a:hover, nav a:focus {
+  color: #333;
+  background: #efefef;
+}
+
+/* CTA Links */
+a.call-to-action {
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: #333;
+  background: #efefef;
+  border: 1px solid #333;
+  text-decoration: none;
+}
+a.call-to-action:hover, a.call-to-action:focus {
+  color: #fff;
+  background: #555;
+  border-color: #555;
+}
+
+/* Forms */
+.required {
+  color: #CC0000;
+  background-color: #fff;
+}
+
+/* fonts, line-height, margin and padding in relative units */
+/* media queries sized in ems */
+
+@media print {
+  body > *:not(main) {
+    display: none;}
+}
