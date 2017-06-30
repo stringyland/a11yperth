@@ -32,6 +32,12 @@ h4 {
 small, .font_small {
   font-size: 0.75em; }
 
+a {
+  color: #0000FF; }
+
+a:hover, a:focus {
+  background: #A2DED0; }
+
 header, main, footer {
   width: 90%;
   max-width: 60em;
@@ -57,5 +63,8 @@ nav a {
   padding: 0.5em 1em;
   text-align: center; }
 
+nav a:hover, nav a:focus {
+  text-decoration: underline; }
+
 nav [aria-current="page"] {
-  background: #A2DED0; }
+  background: #edf9f6; }

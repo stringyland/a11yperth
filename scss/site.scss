@@ -7,6 +7,7 @@ $standard-color: #333333; //charcoal grey
 $black-color: #000000;
 $white-color: #fffff;
 
+$accent-lighter: lighten($accent-color,20%);
 
 // Typography
 
@@ -37,6 +38,12 @@ h3 {font-size: 1.777em;}
 h4 {font-size: 1.333em;}
 small, .font_small {font-size: 0.75em;}
 
+a {
+  color: $primary-color;
+}
+a:hover, a:focus {
+  background: $accent-color;
+}
 
 // Layout
 
@@ -67,8 +74,11 @@ nav a {
   padding: 0.5em 1em;
   text-align: center;
 }
+nav a:hover, nav a:focus {
+  text-decoration: underline;
+}
 nav [aria-current="page"] {
-  background: $accent-color;
+  background: $accent-lighter;
 }
 
 @media all and (min-width: 30em) {
