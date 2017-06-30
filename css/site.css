@@ -2,7 +2,7 @@ html {
   font-size: 1em; }
 
 body {
-  background-color: #fffff;
+  background-color: #ffffff;
   font-family: sans-serif;
   font-weight: 400;
   line-height: 1.45;
@@ -51,7 +51,8 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 nav li {
   display: flex;
@@ -68,3 +69,9 @@ nav a:hover, nav a:focus {
 
 nav [aria-current="page"] {
   background: #edf9f6; }
+
+.hero-large {
+  background: #0000FF;
+  color: #ffffff;
+  font-size: 2.369em;
+  padding: 1.5em; }
