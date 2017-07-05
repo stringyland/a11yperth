@@ -38,6 +38,9 @@ a {
 a:hover, a:focus {
   background: #A2DED0; }
 
+.center {
+  text-align: center; }
+
 header, main, footer {
   width: 90%;
   max-width: 60em;
@@ -79,6 +82,17 @@ nav [aria-current="page"] {
 .standard-large {
   font-size: 1.333em;
   padding: 2em; }
+
+.link-large {
+  border: 3px solid #0000FF;
+  border-radius: 1.5em;
+  color: #0000FF;
+  padding: 1em 2em;
+  text-decoration: none; }
+
+.link-large:hover, .link-large:focus {
+  background: #0000FF;
+  color: #ffffff; }
 
 .icon {
   width: 1em;

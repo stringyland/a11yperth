@@ -45,6 +45,11 @@ a:hover, a:focus {
   background: $accent-color;
 }
 
+// Utilities
+.center {
+  text-align: center;
+}
+
 // Layout
 
 header, main, footer {
@@ -92,6 +97,17 @@ nav [aria-current="page"] {
 .standard-large {
   font-size: 1.333em;
   padding: 2em;
+}
+.link-large {
+  border: 3px solid $primary-color;
+  border-radius: 1.5em;
+  color: $primary-color;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+.link-large:hover, .link-large:focus {
+  background: $primary-color;
+  color: $white-color;
 }
 
 // Icons
