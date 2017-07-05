@@ -85,5 +85,6 @@ nav [aria-current="page"] {
   height: 1em;
   fill: #000000; }
 
-.hero-large .icon-circle {
+.hero-large .icon-circle-triple {
+  width: 2em;
   fill: #A2DED0; }
