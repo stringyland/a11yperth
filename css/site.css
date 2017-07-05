@@ -79,3 +79,11 @@ nav [aria-current="page"] {
 .standard-large {
   font-size: 1.333em;
   padding: 2em; }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: #000000; }
+
+.hero-large .icon-circle {
+  color: #A2DED0; }

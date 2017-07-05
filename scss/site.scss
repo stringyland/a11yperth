@@ -93,3 +93,14 @@ nav [aria-current="page"] {
   font-size: 1.333em;
   padding: 2em;
 }
+
+// Icons
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: $black-color;
+}
+
+.hero-large .icon-circle {
+  color: $accent-color;
+}
