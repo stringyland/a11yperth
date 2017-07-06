@@ -41,10 +41,54 @@ a:hover, a:focus {
 .center {
   text-align: center; }
 
-header, main, footer {
-  width: 90%;
-  max-width: 60em;
+/* Block layout */
+.grid-even {
+  width: 60rem;
   margin: 0 auto; }
+
+/* Grid layout where supported */
+@supports (display: grid) {
+  div {
+    box-sizing: border-box; }
+  .grid-even {
+    width: auto; }
+  .hero-large {
+    width: 60rem;
+    margin: auto;
+    padding: 1em; } }
+
+.grid-even {
+  display: grid;
+  grid-template-columns: 1fr 30rem 30rem 1fr;
+  grid-template-rows: auto auto auto auto auto auto; }
+
+.area-header {
+  grid-column: 2 / 4;
+  grid-row: 1; }
+
+.area-nav {
+  grid-column: 2 / 4;
+  grid-row: 2; }
+
+.area-hero {
+  grid-column: 1 / 5;
+  grid-row: 3; }
+
+.area-content {
+  grid-column: 2 / 4;
+  grid-row: 4; }
+
+.area-otherL {
+  grid-column: 2 / 3;
+  grid-row: 5; }
+
+.area-otherR {
+  grid-column: 3 / 4;
+  grid-row: 5; }
+
+.area-footer {
+  grid-column: 2 / 4;
+  grid-row: 6; }
 
 nav ul {
   width: 100%;
@@ -76,18 +120,17 @@ nav [aria-current="page"] {
 .hero-large {
   background: #0000FF;
   color: #ffffff;
-  font-size: 2.369em;
-  padding: 1.5em; }
+  font-size: 2.369em; }
 
 .standard-large {
   font-size: 1.333em;
-  padding: 2em; }
+  padding: 2rem; }
 
 .link-large {
   border: 3px solid #0000FF;
-  border-radius: 1.5em;
+  border-radius: 1.5rem;
   color: #0000FF;
-  padding: 1em 2em;
+  padding: 1rem 2rem;
   text-decoration: none; }
 
 .link-large:hover, .link-large:focus {
