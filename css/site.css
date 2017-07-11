@@ -12,7 +12,7 @@ p {
   margin-bottom: 1.3em; }
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
+  margin: 1em 0 0.5em;
   font-weight: inherit;
   line-height: 1.2; }
 
@@ -124,9 +124,37 @@ nav [aria-current="page"] {
   color: #ffffff;
   font-size: 2.369em; }
 
+.hero-small {
+  background: #0000FF;
+  color: #ffffff;
+  padding: 1rem 2rem; }
+
+.hero-small h2 {
+  color: #A2DED0; }
+
 .standard-large {
   font-size: 1.333em;
   padding: 2rem; }
+
+.resource-large {
+  background: #0000FF;
+  color: #ffffff;
+  margin-bottom: 1.5rem; }
+
+.resource-large img {
+  width: 100%; }
+
+.resource-large-text {
+  color: #ffffff;
+  padding: 1rem 1rem 2rem 1rem; }
+
+.resource-large h2,
+.resource-large p,
+.resource-large a {
+  margin-top: 0.5em; }
+
+.resource-large-text h2 {
+  color: #A2DED0; }
 
 .link-large {
   border: 3px solid #0000FF;
@@ -139,6 +167,17 @@ nav [aria-current="page"] {
   background: #0000FF;
   color: #ffffff; }
 
+.link-medium {
+  border: 2px solid #edf9f6;
+  border-radius: 1.5rem;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-decoration: none; }
+
+.link-medium:hover, .link-medium:focus {
+  background: #ffffff;
+  color: #0000FF; }
+
 .icon {
   width: 1em;
   height: 1em;
@@ -146,4 +185,8 @@ nav [aria-current="page"] {
 
 .hero-large .icon-circle-triple {
   width: 2em;
+  fill: #A2DED0; }
+
+.resource-large .icon-circle-triple {
+  width: 1.5em;
   fill: #A2DED0; }

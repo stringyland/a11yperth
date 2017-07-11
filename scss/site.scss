@@ -24,7 +24,7 @@ body {
 p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
+  margin: 1em 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
 }
@@ -138,15 +138,48 @@ nav [aria-current="page"] {
 }
 
 // Modules
+
 .hero-large {
   background: $primary-color;
   color: $white-color;
   font-size: 2.369em;
 }
+
+.hero-small {
+  background: $primary-color;
+  color: $white-color;
+  padding: 1rem 2rem;
+}
+.hero-small h2 {
+  color: $accent-color;
+}
 .standard-large {
   font-size: 1.333em;
   padding: 2rem;
 }
+
+.resource-large {
+  background: $primary-color;
+  color: $white-color;
+  margin-bottom: 1.5rem;
+}
+.resource-large img {
+  width: 100%;
+}
+.resource-large-text {
+  color: $white-color;
+  padding: 1rem 1rem 2rem 1rem;
+}
+.resource-large h2,
+.resource-large p,
+.resource-large a {
+  margin-top: 0.5em;
+}
+.resource-large-text h2 {
+  color: $accent-color;
+}
+
+
 .link-large {
   border: 3px solid $primary-color;
   border-radius: 1.5rem;
@@ -158,6 +191,18 @@ nav [aria-current="page"] {
   background: $primary-color;
   color: $white-color;
 }
+.link-medium {
+  border: 2px solid $accent-lighter;
+  border-radius: 1.5rem;
+  color: $white-color;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+.link-medium:hover, .link-medium:focus {
+  background: $white-color;
+  color: $primary-color;
+}
+
 
 // Icons
 .icon {
@@ -168,5 +213,9 @@ nav [aria-current="page"] {
 
 .hero-large .icon-circle-triple {
   width: 2em;
+  fill: $accent-color;
+}
+.resource-large .icon-circle-triple {
+  width: 1.5em;
   fill: $accent-color;
 }
