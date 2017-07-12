@@ -3,7 +3,7 @@ html {
 
 body {
   background-color: #ffffff;
-  font-family: sans-serif;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.45;
   color: #333333; }
@@ -40,6 +40,16 @@ a:hover, a:focus {
 
 .center {
   text-align: center; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
 
 /* Block layout */
 .grid-even {
@@ -86,7 +96,8 @@ a:hover, a:focus {
 
 .area-otherR {
   grid-column: 3 / 4;
-  grid-row: 5; }
+  grid-row: 5;
+  padding: 0 2em; }
 
 .area-footer {
   grid-column: 2 / 4;
@@ -139,7 +150,8 @@ nav [aria-current="page"] {
 .resource-large {
   background: #0000FF;
   color: #ffffff;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  font-size: 1.333em; }
 
 .resource-large img {
   width: 100%; }
@@ -155,6 +167,13 @@ nav [aria-current="page"] {
 
 .resource-large-text h2 {
   color: #A2DED0; }
+
+.area-otherR h2 {
+  color: #0000FF; }
+
+.news-snippet {
+  padding-bottom: 2em;
+  border-bottom: 1px solid #333333; }
 
 .link-large {
   border: 3px solid #0000FF;
@@ -190,3 +209,7 @@ nav [aria-current="page"] {
 .resource-large .icon-circle-triple {
   width: 1.5em;
   fill: #A2DED0; }
+
+.area-otherR .icon-circle-triple {
+  width: 1.5em;
+  fill: #0000FF; }
