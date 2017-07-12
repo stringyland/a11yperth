@@ -76,17 +76,25 @@ a:hover, a:focus {
     .grid-even {
       width: auto;
     }
-    .hero-large {
-      width: 60rem;
-      margin: auto;
-      padding: 1em;
+    @media only screen and (min-width: 600px){
+      .hero-large {
+        width: 60rem;
+        margin: auto;
+        padding: 1em;
+      }
     }
   }
   .grid-even {
     display: grid;
-    grid-template-columns: 1fr 30rem 30rem 1fr;
+    grid-template-columns: 1fr 45% 45% 1fr;
     grid-template-rows: auto auto auto auto auto auto;
   }
+  @media only screen and (min-width: 600px){
+    .grid-even {
+      grid-template-columns: 1fr 30rem 30rem 1fr;
+    }
+  }
+
   .area-header {
     grid-column: 2 / 4;
     grid-row: 1;
@@ -105,19 +113,20 @@ a:hover, a:focus {
     grid-column: 2 / 4;
     grid-row: 4;
   }
-  .area-otherL {
-    grid-column: 2 / 3;
-    grid-row: 5;
-  }
-  .area-otherR {
-    grid-column: 3 / 4;
-    grid-row: 5;
-    padding: 0 2em;
-  }
-  .area-footer {
-    grid-column: 2 / 4;
-    grid-row: 6;
-  }
+
+    .area-otherL {
+      grid-column: 2 / 3;
+      grid-row: 5;
+    }
+    .area-otherR {
+      grid-column: 3 / 4;
+      grid-row: 5;
+      padding: 0 2em;
+    }
+    .area-footer {
+      grid-row: 6;
+    }
+
 
 // Navigation
 nav ul {

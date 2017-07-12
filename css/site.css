@@ -62,15 +62,22 @@ a:hover, a:focus {
     box-sizing: border-box; }
   .grid-even {
     width: auto; }
-  .hero-large {
-    width: 60rem;
-    margin: auto;
-    padding: 1em; } }
+  @media only screen and (min-width: 600px) {
+    .hero-large {
+      width: 60rem;
+      margin: auto;
+      padding: 1em; } } }
 
 .grid-even {
   display: grid;
-  grid-template-columns: 1fr 30rem 30rem 1fr;
+  grid-template-columns: 1fr 45% 45% 1fr;
   grid-template-rows: auto auto auto auto auto auto; }
+
+@media only screen and (min-width: 600px) {
+  .grid-even {
+    display: grid;
+    grid-template-columns: 1fr 30rem 30rem 1fr;
+    grid-template-rows: auto auto auto auto auto auto; } }
 
 .area-header {
   grid-column: 2 / 4;
@@ -91,13 +98,21 @@ a:hover, a:focus {
   grid-row: 4; }
 
 .area-otherL {
-  grid-column: 2 / 3;
+  grid-column: 1 / 5;
   grid-row: 5; }
 
 .area-otherR {
-  grid-column: 3 / 4;
-  grid-row: 5;
-  padding: 0 2em; }
+  grid-column: 1 / 5;
+  grid-row: 6; }
+
+@media only screen and (min-width: 600px) {
+  .area-otherL {
+    grid-column: 2 / 3;
+    grid-row: 5; }
+  .area-otherR {
+    grid-column: 3 / 4;
+    grid-row: 5;
+    padding: 0 2em; } }
 
 .area-footer {
   grid-column: 2 / 4;
