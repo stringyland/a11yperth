@@ -98,21 +98,13 @@ a:hover, a:focus {
   grid-row: 4; }
 
 .area-otherL {
-  grid-column: 1 / 5;
+  grid-column: 2 / 3;
   grid-row: 5; }
 
 .area-otherR {
-  grid-column: 1 / 5;
-  grid-row: 6; }
-
-@media only screen and (min-width: 600px) {
-  .area-otherL {
-    grid-column: 2 / 3;
-    grid-row: 5; }
-  .area-otherR {
-    grid-column: 3 / 4;
-    grid-row: 5;
-    padding: 0 2em; } }
+  grid-column: 3 / 4;
+  grid-row: 5;
+  padding: 0 2em; }
 
 .area-footer {
   grid-column: 2 / 4;
