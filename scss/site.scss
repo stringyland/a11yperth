@@ -9,9 +9,17 @@ $white-color: #ffffff;
 
 $accent-lighter: lighten($accent-color,20%);
 
+/* Modular type scale: Perfect Fourth on type-scale.com*/
+$size-S: 0.75em;
+$size-M: 1em;
+$size-L: 1.333em;
+$size-XL: 1.777em;
+$size-XXL: 2.369em;
+$size-XXXL: 3.157em;
+
 // Typography
 
-html {font-size: 1em;}
+html {font-size: $size-M;}
 
 body {
   background-color: $white-color;
@@ -31,12 +39,12 @@ h1, h2, h3, h4 {
 
 h1 {
   margin-top: 0;
-  font-size: 3.157em;
+  font-size: $size-XXXL;
 }
-h2 {font-size: 2.369em;}
-h3 {font-size: 1.777em;}
-h4 {font-size: 1.333em;}
-small, .font_small {font-size: 0.75em;}
+h2 {font-size: $size-XXL;}
+h3 {font-size: $size-XL;}
+h4 {font-size: $size-L;}
+small, .font_small {font-size: $size-S;}
 
 a {
   color: $primary-color;
@@ -136,7 +144,7 @@ nav ul {
   width: 100%;
   border: 1px solid $standard-color;
   border-width: 1px 0 1px 0;
-  font-size: 1.333em;
+  font-size: $size-L;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -165,7 +173,7 @@ nav [aria-current="page"] {
 .hero-large {
   background: $primary-color;
   color: $white-color;
-  font-size: 2.369em;
+  font-size: $size-XL;
 }
 
 .hero-small {
@@ -177,7 +185,7 @@ nav [aria-current="page"] {
   color: $accent-color;
 }
 .standard-large {
-  font-size: 1.333em;
+  font-size: $size-L;
   padding: 2rem;
 }
 
@@ -185,7 +193,7 @@ nav [aria-current="page"] {
   background: $primary-color;
   color: $white-color;
   margin-bottom: 1.5rem;
-  font-size: 1.333em;
+  font-size: $size-L;
 }
 .resource-large img {
   width: 100%;
