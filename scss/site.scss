@@ -74,8 +74,8 @@ a:hover, a:focus {
 // Layout
 
 /* Block layout */
-.grid-odd,
-.grid-even {
+.grid-home,
+.grid-page {
   width: 60rem;
   margin: 0 auto;
 }
@@ -90,51 +90,51 @@ a:hover, a:focus {
   div {
     box-sizing: border-box;
   }
-  .grid-odd,
-  .grid-even {
+  .grid-home,
+  .grid-page {
     width: auto;
   }
 }
-.grid-odd { /*3 cols by 6 rows; content in row 5 does not display until wider screens*/
+.grid-home { /*3 cols by 6 rows; content in row 5 does not display until wider screens*/
   display: grid;
   grid-template-columns: 1fr 90% 1fr;
   grid-template-rows: auto auto auto auto auto auto;
 }
-.grid-even { /*4 cols by 4 rows*/
+.grid-page { /*4 cols by 4 rows*/
   display: grid;
   grid-template-columns: 1fr 90% 1fr;
   grid-template-rows: auto auto auto auto;
 }
 @media screen and (min-width: $break-M){
-  .grid-odd {
+  .grid-home {
     grid-template-columns: 1fr 80% 1fr;
   }
-  .grid-even {
+  .grid-page {
     grid-template-columns: 1fr 80% 1fr;
   }
 }
 @media screen and (min-width: $break-L){
-  .grid-odd {
+  .grid-home {
     grid-template-columns: 1fr 60% 1fr;
   }
-  .grid-even {
+  .grid-page {
     grid-template-columns: 1fr 60% 1fr;
   }
 }
 
-.grid-odd .area-header {
+.grid-home .area-header {
   grid-column: 2 / 3;
   grid-row: 1;
 }
-.grid-even .area-header {
+.grid-page .area-header {
   grid-column: 2 / 3;
   grid-row: 1;
 }
-.grid-odd .area-nav {
+.grid-home .area-nav {
   grid-column: 2 / 3;
   grid-row: 2;
 }
-.grid-even .area-nav {
+.grid-page .area-nav {
   grid-column: 2 / 3;
   grid-row: 2;
 }
@@ -161,11 +161,11 @@ a:hover, a:focus {
     grid-template-columns: 1fr 60% 1fr;
   }
 }
-.grid-odd .area-content {
+.grid-home .area-content {
   grid-column: 2 / 3;
   grid-row: 4;
 }
-.grid-even .area-content {
+.grid-page .area-content {
   grid-column: 2 / 3;
   grid-row: 3;
   display: flex;
@@ -213,11 +213,11 @@ a:hover, a:focus {
   .flex-sidebar {width: 30%; margin-left: 5%;}
 }
 
-.grid-odd .area-footer {
+.grid-home .area-footer {
   grid-column: 2 / 3;
   grid-row: 6;
 }
-.grid-even .area-footer {
+.grid-page .area-footer {
   grid-column: 2 / 3;
   grid-row: 4;
 }
