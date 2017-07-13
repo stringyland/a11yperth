@@ -53,7 +53,8 @@ a:hover, a:focus {
   border: 0; }
 
 /* Block layout */
-.grid-odd {
+.grid-odd,
+.grid-even {
   width: 60rem;
   margin: 0 auto; }
 
@@ -61,30 +62,48 @@ a:hover, a:focus {
 @supports (display: grid) {
   div {
     box-sizing: border-box; }
-  .grid-odd {
+  .grid-odd,
+  .grid-even {
     width: auto; } }
 
 .grid-odd {
+  /*3 cols by 6 rows*/
   display: grid;
   grid-template-columns: 1fr 90% 1fr;
   grid-template-rows: auto auto auto auto auto auto; }
 
+.grid-even {
+  /*4 cols by 4 rows*/
+  display: grid;
+  grid-template-columns: 1fr 60% 30% 1fr;
+  grid-template-rows: auto auto auto auto; }
+
 @media screen and (min-width: 700px) {
   .grid-odd {
-    display: grid;
-    grid-template-columns: 1fr 80% 1fr;
-    grid-template-rows: auto auto auto auto auto auto; } }
+    grid-template-columns: 1fr 80% 1fr; }
+  .grid-even {
+    grid-template-columns: 1fr 60% 20% 1fr; } }
 
 @media screen and (min-width: 1300px) {
   .grid-odd {
-    grid-template-columns: 1fr 60% 1fr; } }
+    grid-template-columns: 1fr 60% 1fr; }
+  .grid-even {
+    grid-template-columns: 1fr 40% 20% 1fr; } }
 
-.area-header {
+.grid-odd .area-header {
   grid-column: 2 / 3;
   grid-row: 1; }
 
-.area-nav {
+.grid-even .area-header {
+  grid-column: 2 / 4;
+  grid-row: 1; }
+
+.grid-odd .area-nav {
   grid-column: 2 / 3;
+  grid-row: 2; }
+
+.grid-even .area-nav {
+  grid-column: 2 / 4;
   grid-row: 2; }
 
 .area-hero-bg {
@@ -139,9 +158,21 @@ a:hover, a:focus {
     display: block;
     width: 50%; } }
 
-.area-footer {
-  grid-column: 2 / 4;
+.area-main {
+  grid-column: 2 / 3;
+  grid-row: 3; }
+
+.area-sidebar {
+  grid-column: 3 / 4;
+  grid-row: 3; }
+
+.grid-odd .area-footer {
+  grid-column: 2 / 3;
   grid-row: 6; }
+
+.grid-even .area-footer {
+  grid-column: 2 / 4;
+  grid-row: 4; }
 
 .area-hero-bg,
 .area-other-bg {
