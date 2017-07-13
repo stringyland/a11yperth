@@ -1,4 +1,5 @@
 /* Modular type scale: Perfect Fourth on type-scale.com*/
+/* Screen sizes for media queries, assumes mobile first strategy */
 html {
   font-size: 1em; }
 
@@ -61,54 +62,91 @@ a:hover, a:focus {
   div {
     box-sizing: border-box; }
   .grid-even {
-    width: auto; }
-  @media only screen and (min-width: 600px) {
-    .hero-large {
-      width: 60rem;
-      margin: auto;
-      padding: 1em; } } }
+    width: auto; } }
 
 .grid-even {
   display: grid;
-  grid-template-columns: 1fr 45% 45% 1fr;
+  grid-template-columns: 1fr 90% 1fr;
   grid-template-rows: auto auto auto auto auto auto; }
 
-@media only screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .grid-even {
     display: grid;
-    grid-template-columns: 1fr 30rem 30rem 1fr;
+    grid-template-columns: 1fr 80% 1fr;
     grid-template-rows: auto auto auto auto auto auto; } }
 
+@media screen and (min-width: 1300px) {
+  .grid-even {
+    grid-template-columns: 1fr 60% 1fr; } }
+
 .area-header {
-  grid-column: 2 / 4;
+  grid-column: 2 / 3;
   grid-row: 1; }
 
 .area-nav {
-  grid-column: 2 / 4;
+  grid-column: 2 / 3;
   grid-row: 2; }
 
+.area-hero-bg {
+  grid-column: 1 / 4;
+  grid-row: 3; }
+
 .area-hero {
-  grid-column: 1 / 5;
-  grid-row: 3;
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a2ded0' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E"); }
+  width: 100%; }
+
+@media screen and (min-width: 700px) {
+  .area-hero-bg {
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-rows: 1; }
+  .area-hero {
+    grid-column: 2 / 3;
+    grid-row: 1; } }
+
+@media screen and (min-width: 1300px) {
+  .area-hero-bg {
+    grid-template-columns: 1fr 60% 1fr; } }
 
 .area-content {
-  grid-column: 2 / 4;
+  grid-column: 2 / 3;
   grid-row: 4; }
 
-.area-otherL {
-  grid-column: 2 / 3;
-  grid-row: 5; }
-
-.area-otherR {
-  grid-column: 3 / 4;
+.area-other-bg {
+  grid-column: 1 / 4;
   grid-row: 5;
-  padding: 0 2em; }
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: 1; }
+
+@media screen and (min-width: 1300px) {
+  .area-other-bg {
+    grid-template-columns: 1fr 60% 1fr; } }
+
+.area-other {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff; }
+
+.flex-otherL,
+.flex-otherR {
+  display: none; }
+
+@media screen and (min-width: 700px) {
+  .flex-otherL,
+  .flex-otherR {
+    display: block;
+    width: 50%; } }
 
 .area-footer {
   grid-column: 2 / 4;
   grid-row: 6; }
+
+.area-hero-bg,
+.area-other-bg {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a2ded0' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E"); }
 
 nav ul {
   width: 100%;
@@ -137,14 +175,16 @@ nav a:hover, nav a:focus {
 nav [aria-current="page"] {
   background: #edf9f6; }
 
-.hero-large {
+.area-hero {
   background: #0000FF;
   color: #ffffff;
-  font-size: 1.777em; }
+  font-size: 1.777em;
+  padding: 2em 1em 1em 1em; }
 
 .hero-small {
   background: #0000FF;
   color: #ffffff;
+  font-size: 1.333em;
   padding: 1rem 2rem; }
 
 .hero-small h2 {
@@ -152,7 +192,7 @@ nav [aria-current="page"] {
 
 .standard-large {
   font-size: 1.333em;
-  padding: 2rem; }
+  padding: 2em 2em 1em 2em; }
 
 .resource-large {
   background: #0000FF;
@@ -172,13 +212,18 @@ nav [aria-current="page"] {
 .resource-large a {
   margin-top: 0.5em; }
 
-.resource-large-text h2 {
-  color: #A2DED0; }
+.resource-large-text h3 {
+  color: #A2DED0;
+  margin-top: 0.5em; }
 
-.area-otherR h2 {
+.flex-otherR {
+  padding-left: 1em; }
+
+.flex-otherR h2 {
   color: #0000FF; }
 
 .news-snippet {
+  margin-right: 1em;
   padding-bottom: 2em;
   border-bottom: 1px solid #333333; }
 
