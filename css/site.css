@@ -53,7 +53,7 @@ a:hover, a:focus {
   border: 0; }
 
 /* Block layout */
-.grid-even {
+.grid-odd {
   width: 60rem;
   margin: 0 auto; }
 
@@ -61,22 +61,22 @@ a:hover, a:focus {
 @supports (display: grid) {
   div {
     box-sizing: border-box; }
-  .grid-even {
+  .grid-odd {
     width: auto; } }
 
-.grid-even {
+.grid-odd {
   display: grid;
   grid-template-columns: 1fr 90% 1fr;
   grid-template-rows: auto auto auto auto auto auto; }
 
 @media screen and (min-width: 700px) {
-  .grid-even {
+  .grid-odd {
     display: grid;
     grid-template-columns: 1fr 80% 1fr;
     grid-template-rows: auto auto auto auto auto auto; } }
 
 @media screen and (min-width: 1300px) {
-  .grid-even {
+  .grid-odd {
     grid-template-columns: 1fr 60% 1fr; } }
 
 .area-header {

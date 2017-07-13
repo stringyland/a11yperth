@@ -74,7 +74,7 @@ a:hover, a:focus {
 // Layout
 
 /* Block layout */
-.grid-even {
+.grid-odd {
   width: 60rem;
   margin: 0 auto;
 }
@@ -84,24 +84,24 @@ a:hover, a:focus {
   div {
     box-sizing: border-box;
   }
-  .grid-even {
+  .grid-odd {
     width: auto;
   }
 }
-.grid-even {
+.grid-odd {
   display: grid;
   grid-template-columns: 1fr 90% 1fr;
   grid-template-rows: auto auto auto auto auto auto;
 }
 @media screen and (min-width: $break-M){
-  .grid-even {
+  .grid-odd {
     display: grid;
     grid-template-columns: 1fr 80% 1fr;
     grid-template-rows: auto auto auto auto auto auto;
   }
 }
 @media screen and (min-width: $break-L){
-  .grid-even {
+  .grid-odd {
     grid-template-columns: 1fr 60% 1fr;
   }
 }
